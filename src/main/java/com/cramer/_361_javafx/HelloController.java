@@ -1,6 +1,7 @@
 package com.cramer._361_javafx;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -9,6 +10,8 @@ public class HelloController {
     private Label welcomeText;
     @FXML
     private TextField inputField;
+    @FXML
+    private CheckBox checkbox;
 
     @FXML
     private void onKlickMichButtonClick() {
@@ -21,7 +24,9 @@ public class HelloController {
         System.out.println("Text eingegeben: " + text);
     }
 
-    public String returnHello(){
-        return "Hello!";
+    @FXML
+    private void onCheckboxKlicked(){
+        System.out.println("Checkbox was used.");
+        System.out.println("Is checkbox selected? " + checkbox.isSelected());
     }
 }
