@@ -5,6 +5,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -21,4 +22,11 @@
    <Label text="Mein Text:" />
    <TextField fx:id="inputField" onAction="#onTextEntered" />
    <CheckBox fx:id="checkbox" mnemonicParsing="false" onAction="#onCheckboxKlicked" text="Klick mich!" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+       <Button mnemonicParsing="false" onAction="#handleColor" text="Rot" textFill="RED" />
+         <Button mnemonicParsing="false" onAction="#handleColor" text="Grün" textFill="#009400" />
+         <Button mnemonicParsing="false" onAction="#handleColor" text="Blau" textFill="#1000c6" />
+      </children>
+   </HBox>
 </VBox>
